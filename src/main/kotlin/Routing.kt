@@ -34,7 +34,7 @@ fun Application.configureRouting() {
                 }
 
                 sessions.forEach { session ->
-                    session.sendSerialized(database.messages)
+                    session.sendSerialized<List<Message>>(database.messages.toList())
                 }
             }
         }

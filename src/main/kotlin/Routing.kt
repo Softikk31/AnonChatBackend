@@ -4,7 +4,6 @@ import io.ktor.server.application.*
 import io.ktor.server.routing.*
 import io.ktor.server.websocket.*
 import io.ktor.websocket.*
-import kotlinx.coroutines.isActive
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
 import kotlin.time.Clock
@@ -20,9 +19,7 @@ fun Application.configureRouting() {
             sessions.add(this)
             sendSerialized(database.messages)
 
-            while (isActive) {
-                val frame = incoming.receive()
-
+            for (frame in incoming) {
                 if (frame is Frame.Text) {
                     database.messages.add(
                         Message(

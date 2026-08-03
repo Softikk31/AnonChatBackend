@@ -24,4 +24,8 @@ dependencies {
     implementation(libs.logback.classic)
     implementation(ktorLibs.server.contentNegotiation)
     implementation(ktorLibs.serialization.kotlinx.json)
+    implementation(kotlin("stdlib"))
+}
+repositories {
+    mavenCentral()
 }

@@ -1,4 +1,4 @@
-package dev.softikk.anonchat.backend
+package dev.softikk.anonchat.backend.plugins
 
 import io.ktor.server.application.*
 import io.ktor.serialization.kotlinx.json.*

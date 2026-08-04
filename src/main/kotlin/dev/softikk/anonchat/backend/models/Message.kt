@@ -1,4 +1,4 @@
-package dev.softikk.anonchat.backend
+package dev.softikk.anonchat.backend.models
 
 import kotlinx.datetime.LocalDateTime
 import kotlinx.serialization.Serializable
@@ -8,4 +8,3 @@ import kotlin.uuid.Uuid
 data class Message(
     val id: Uuid, val text: String, val createAt: LocalDateTime
 )
-

@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "dev.softikk.anonchat.backend"
-version = "1.0.0-SNAPSHOT"
+version = "1.0.0"
 
 application {
     mainClass = "io.ktor.server.cio.EngineMain"
@@ -17,6 +17,14 @@ kotlin {
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.8.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
+
+    implementation(libs.hikarycp)
+    implementation(libs.postgresql)
+    implementation(libs.exposed.core)
+    implementation(libs.exposed.dao)
+    implementation(libs.exposed.jdbc)
+    implementation(libs.exposed.datetime)
+
     implementation(ktorLibs.server.cio)
     implementation(ktorLibs.server.config.yaml)
     implementation(ktorLibs.server.core)
@@ -24,7 +32,6 @@ dependencies {
     implementation(libs.logback.classic)
     implementation(ktorLibs.server.contentNegotiation)
     implementation(ktorLibs.serialization.kotlinx.json)
-    implementation(kotlin("stdlib"))
 }
 repositories {
     mavenCentral()

@@ -1,6 +1,13 @@
 ktor:
   deployment:
-    port: 8080
+    host: ${HOST}
+    port: ${PORT}
   application:
     modules:
       - dev.softikk.anonchat.backend.MainKt.module
+  postgres:
+    host: ${PS_HOST}
+    port: ${PS_PORT}
+    database_name: ${PS_DATABASE_NAME}
+    username: ${PS_USERNAME}
+    password: ${PS_PASSWORD}

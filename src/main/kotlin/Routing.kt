@@ -28,10 +28,10 @@ fun Application.configureRouting() {
                             createAt = Clock.System.now().toLocalDateTime(TimeZone.UTC)
                         )
                     )
-                }
 
-                sessions.forEach { session ->
-                    session.sendSerialized<List<Message>>(database.messages.toList())
+                    sessions.forEach { session ->
+                        session.sendSerialized<List<Message>>(database.messages.toList())
+                    }
                 }
             }
         }

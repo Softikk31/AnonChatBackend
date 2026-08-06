@@ -11,4 +11,6 @@ class MessageDao(id: EntityID<Uuid>) : UuidEntity(id) {
 
     var text by MessageEntity.text
     var createAt by MessageEntity.createAt
+    var anonName by MessageEntity.anonName
+    var anonNameColor by MessageEntity.anonNameColor
 }

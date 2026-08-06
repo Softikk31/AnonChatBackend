@@ -1,0 +1,47 @@
+package dev.softikk.anonchat.backend
+
+const val IS_DEBUG = false
+
+val AnonNameColors = listOf(
+    0xFFE85D5D,
+    0xFFE98C45,
+    0xFFE8C547,
+    0xFFB9D957,
+    0xFF37B96D,
+    0xFF22B39A,
+
+    0xFF23B7C8,
+    0xFF5AAFEA,
+    0xFF4D88E8,
+    0xFF6D70E8,
+    0xFF8C6EEA,
+    0xFFA164E8,
+
+    0xFFC956D8,
+    0xFFD95B9E,
+    0xFFE24E69,
+    0xFFE96F86,
+    0xFFE4B83F,
+    0xFF93CC45,
+
+    0xFF3DBD68,
+    0xFF28AF9D,
+    0xFF1FA9C8,
+    0xFF239ED8,
+    0xFF3F72DD,
+    0xFF7250DD,
+
+    0xFF8A4DDB,
+    0xFFC43B8D,
+    0xFFE76F6F,
+    0xFFE77B2D,
+    0xFFD9AA22,
+    0xFF7DBB2C,
+
+    0xFF36C4B0,
+    0xFF49B7E9,
+    0xFF6A9EEA,
+    0xFF8A91EB,
+    0xFFB07BEA,
+    0xFFE06BA7
+)

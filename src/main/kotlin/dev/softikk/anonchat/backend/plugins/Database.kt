@@ -9,11 +9,11 @@ import org.jetbrains.exposed.v1.jdbc.SchemaUtils
 import org.jetbrains.exposed.v1.jdbc.transactions.transaction
 
 fun Application.configureDatabase() {
-    val host = System.getenv("ps_host")
-    val port = System.getenv("ps_port")
-    val databaseName = System.getenv("ps_database_name")
-    val username = System.getenv("ps_username")
-    val password = System.getenv("ps_password")
+    val host = System.getenv("PS_HOST")
+    val port = System.getenv("PS_PORT")
+    val databaseName = System.getenv("PS_DATABASE_NAME")
+    val username = System.getenv("PS_USERNAME")
+    val password = System.getenv("PS_PASSWORD")
 
     val config = HikariConfig().apply {
         this.jdbcUrl = "jdbc:postgresql://$host:$port/$databaseName"
